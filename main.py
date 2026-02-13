@@ -1,3 +1,4 @@
+
 saldo = 1000
 
 
@@ -15,3 +16,23 @@ elif opcion == "2":
     print ("Nuevo saldo: ", saldo)
 else:
     print ("El monto debe ser mayor a ")
+    
+elif opcion =="3":
+    retiro=float(input("ingrese la cantidad a retirar:$"))
+    if retiro>0:
+        if retiro<=saldo:
+            saldo=saldo-retiro
+            print("Retiro exitoso.")
+        else:
+            print("No tiene suficiente saldo.")
+        else:
+            print("El monto debe ser mayor a 0.")
+            
+    elif opcion =="4":
+        print("Gracias por usar el cajero automatico.")
+        continuar ="n" 
+    else:
+        print("Opcion invalida.")
+        if continuar =="s":
+        continuar = input("\n¿Desea realizar otra operacion?(s/n):")
+        print("Programa finalizado.")
